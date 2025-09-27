@@ -3,7 +3,7 @@
 import CustomerLayout from '@/components/layout/CustomerLayout';
 import { useBooks } from '@/hooks/useBooks';
 import { formatCurrency } from '@/lib/utils';
-import { ArrowRight, Star, Truck, Shield, Headphones, BookOpen } from 'lucide-react';
+import { ArrowRight, Star, Truck, Shield, Headphones, BookOpen, Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -13,28 +13,28 @@ export default function Home() {
   return (
     <CustomerLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6">
                 Your One-Stop Shop for 
-                <span className="text-yellow-300"> School Books</span>
+                <span className="text-emerald-400"> School Books</span>
               </h1>
-              <p className="text-xl mb-8 text-blue-100">
+              <p className="text-xl mb-8 text-slate-300">
                 Find textbooks for all grades and educational boards. Quality books at affordable prices 
                 with fast delivery across India.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/shop"
-                  className="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors flex items-center justify-center"
+                  className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition-colors flex items-center justify-center"
                 >
                   Shop Now <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   href="/categories"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
+                  className="border-2 border-slate-300 text-slate-300 px-8 py-3 rounded-lg font-semibold hover:bg-slate-300 hover:text-slate-900 transition-colors flex items-center justify-center"
                 >
                   Browse Categories
                 </Link>
@@ -71,47 +71,47 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Truck className="w-8 h-8 text-blue-600" />
+              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="w-8 h-8 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
-              <p className="text-gray-600">Free delivery on orders above ₹500 across India</p>
+              <h3 className="text-xl font-semibold mb-2 text-slate-900">Free Shipping</h3>
+              <p className="text-slate-600">Free delivery on orders above ₹500 across India</p>
             </div>
             <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-sky-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">100% Authentic</h3>
-              <p className="text-gray-600">All books are genuine and sourced directly from publishers</p>
+              <h3 className="text-xl font-semibold mb-2 text-slate-900">100% Authentic</h3>
+              <p className="text-slate-600">All books are genuine and sourced directly from publishers</p>
             </div>
             <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Headphones className="w-8 h-8 text-purple-600" />
+              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Headphones className="w-8 h-8 text-amber-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-              <p className="text-gray-600">Get help anytime with our dedicated customer support</p>
+              <h3 className="text-xl font-semibold mb-2 text-slate-900">24/7 Support</h3>
+              <p className="text-slate-600">Get help anytime with our dedicated customer support</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Books */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Books</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Featured Books</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
               Discover our most popular textbooks trusted by students and teachers across India
             </p>
           </div>
 
           {isLoading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[...Array(8)].map((_, i) => (
+              {[...Array(4)].map((_, i) => (
                 <div key={i} className="animate-pulse">
                   <div className="bg-white rounded-lg shadow-sm p-4">
                     <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
@@ -163,9 +163,22 @@ export default function Home() {
                         <span className="text-sm text-gray-600 ml-1">4.5</span>
                       </div>
                     </div>
-                    <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
-                      Add to Cart
-                    </button>
+                    <div className="flex gap-2">
+                      <button 
+                        onClick={() => window.open(`tel:+919876543210`, '_self')}
+                        className="flex-1 bg-slate-700 text-white py-2 px-3 rounded-md hover:bg-slate-800 transition-colors flex items-center justify-center text-sm"
+                      >
+                        <Phone className="w-4 h-4 mr-1" />
+                        Call +91 7015214941
+                      </button>
+                      {/* <button 
+                        onClick={() => window.open(`https://wa.me/919876543210?text=Hi, I'm interested in "${book.title}" by ${book.author}. Price: ${formatCurrency(book.price)}`, '_blank')}
+                        className="flex-1 bg-emerald-600 text-white py-2 px-3 rounded-md hover:bg-emerald-700 transition-colors flex items-center justify-center text-sm"
+                      >
+                        <MessageCircle className="w-4 h-4 mr-1" />
+                        WhatsApp
+                      </button> */}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -175,7 +188,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/shop"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              className="bg-slate-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors inline-flex items-center"
             >
               View All Books <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
@@ -184,36 +197,36 @@ export default function Home() {
       </section>
 
       {/* Educational Boards */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Shop by Educational Board</h2>
-            <p className="text-gray-600">Find books for your specific educational board</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Shop by Educational Board</h2>
+            <p className="text-slate-600">Find books for your specific educational board</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { name: 'CBSE', count: '500+', color: 'bg-blue-100 text-blue-800' },
-              { name: 'ICSE', count: '300+', color: 'bg-green-100 text-green-800' },
-              { name: 'State Board', count: '400+', color: 'bg-purple-100 text-purple-800' },
-              { name: 'IGCSE', count: '150+', color: 'bg-orange-100 text-orange-800' },
-              { name: 'IB', count: '100+', color: 'bg-pink-100 text-pink-800' },
-              { name: 'NCERT', count: '200+', color: 'bg-indigo-100 text-indigo-800' },
+              { name: 'CBSE', count: '500+', color: 'bg-slate-100 text-slate-800' },
+              { name: 'ICSE', count: '300+', color: 'bg-emerald-100 text-emerald-800' },
+              { name: 'State Board', count: '400+', color: 'bg-sky-100 text-sky-800' },
+              { name: 'IGCSE', count: '150+', color: 'bg-amber-100 text-amber-800' },
+              { name: 'IB', count: '100+', color: 'bg-rose-100 text-rose-800' },
+              { name: 'NCERT', count: '200+', color: 'bg-violet-100 text-violet-800' },
             ].map((board) => (
               <Link
                 key={board.name}
                 href={`/shop?board=${board.name.replace(' ', '_')}`}
-                className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                className="text-center p-6 border border-slate-200 rounded-xl hover:shadow-lg transition-all duration-200 hover:scale-105 bg-white"
               >
                 <div className={`inline-flex px-4 py-2 rounded-full text-sm font-semibold mb-2 ${board.color}`}>
                   {board.name}
                 </div>
-                <p className="text-gray-600 text-sm">{board.count} books</p>
+                <p className="text-slate-600 text-sm">{board.count} books</p>
               </Link>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </CustomerLayout>
   );
 }

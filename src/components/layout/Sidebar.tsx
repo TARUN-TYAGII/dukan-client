@@ -15,14 +15,14 @@ import {
 import { cn } from '@/lib/utils';
 
 const navigation = [
-  { name: 'Dashboard', href: '/admin', icon: Home },
+  // { name: 'Dashboard', href: '/admin', icon: Home },
   { name: 'Books', href: '/admin/books', icon: BookOpen },
   { name: 'Categories', href: '/admin/categories', icon: Package },
-  { name: 'Customers', href: '/admin/customers', icon: Users },
-  { name: 'Orders', href: '/admin/orders', icon: ShoppingCart },
-  { name: 'Users', href: '/admin/users', icon: UserCheck },
-  { name: 'Analytics', href: '/admin/analytics', icon: BarChart3 },
-  { name: 'Settings', href: '/admin/settings', icon: Settings },
+  // { name: 'Customers', href: '/admin/customers', icon: Users },
+  // { name: 'Orders', href: '/admin/orders', icon: ShoppingCart },
+  // { name: 'Users', href: '/admin/users', icon: UserCheck },
+  // { name: 'Analytics', href: '/admin/analytics', icon: BarChart3 },
+  // { name: 'Settings', href: '/admin/settings', icon: Settings },
 ];
 
 export default function Sidebar() {
@@ -30,9 +30,9 @@ export default function Sidebar() {
 
   return (
     <div className="flex flex-col w-64 bg-white border-r border-gray-200">
-      <div className="flex items-center justify-center h-16 px-4 bg-blue-600">
-        <h1 className="text-xl font-bold text-white">BookShop Admin</h1>
-      </div>
+      {/* <div className="flex items-center justify-center h-16 px-4 bg-blue-600">
+        <h1 className="text-xl font-bold text-white">Admin</h1>
+      </div> */}
       
       <div className="px-4 py-2 bg-blue-50 border-b border-blue-200">
         <Link

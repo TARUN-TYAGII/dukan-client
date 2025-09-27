@@ -12,7 +12,8 @@ import {
   X,
   Heart,
   Phone,
-  Mail
+  Mail,
+  MessageCircle
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -32,18 +33,19 @@ export default function CustomerNavbar() {
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
       {/* Top bar */}
-      <div className="bg-blue-600 text-white text-sm">
+      <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white text-white text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-2">
             <div className="flex items-center space-x-4">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-1" />
-                <span>+91 98765 43210</span>
+                <span>To Order call +91 7015214941 as we are not supporting online payment right now</span>
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-1" />
-                <span>info@schoolbooks.com</span>
-              </div>
+                <span>jay@gmail.com</span>
+              </div> */}
+              
             </div>
             <div className="hidden md:block">
               <span>Free shipping on orders above ₹500!</span>
@@ -59,7 +61,7 @@ export default function CustomerNavbar() {
           <Link href="/" className="flex items-center space-x-2">
             <BookOpen className="w-8 h-8 text-blue-600" />
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Ramphal Kitab ghar</h1>
+              <h1 className="text-xl font-bold text-gray-900">Sandeep Trading Company</h1>
               <p className="text-xs text-gray-500">Your Learning Partner</p>
             </div>
           </Link>
@@ -96,7 +98,7 @@ export default function CustomerNavbar() {
               </span>
             </button>
             
-            <Link href="/admin" className="flex items-center text-gray-600 hover:text-blue-600">
+            <Link href="/admin/books" className="flex items-center text-gray-600 hover:text-blue-600">
               <User className="w-6 h-6" />
               <span className="ml-1 text-sm hidden sm:block">Admin</span>
             </Link>

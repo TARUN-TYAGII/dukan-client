@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">About SchoolBooks</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Sandeep Trading Company</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted partner in education, providing quality textbooks and learning materials 
             for students across India since 2010.
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                SchoolBooks was founded in 2010 with a simple vision: to make quality educational 
+                Sandeep Trading Company was founded in 2010 with a simple vision: to make quality educational 
                 books accessible to every student across India. What started as a small bookstore 
                 has grown into one of India's most trusted online destinations for school textbooks.
               </p>
@@ -140,7 +140,7 @@ export default function AboutPage() {
         </div>
 
         {/* CTA */}
-        <div className="bg-blue-600 text-white rounded-2xl p-8 text-center">
+        <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white rounded-2xl p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Learning?</h2>
           <p className="text-xl mb-6 text-blue-100">
             Join thousands of students who trust SchoolBooks for their educational needs.

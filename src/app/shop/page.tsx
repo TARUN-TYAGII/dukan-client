@@ -6,7 +6,7 @@ import CustomerLayout from '@/components/layout/CustomerLayout';
 import { useBooks } from '@/hooks/useBooks';
 import { useCategories } from '@/hooks/useCategories';
 import { formatCurrency } from '@/lib/utils';
-import { Search, Filter, Grid, List, Star, BookOpen, ShoppingCart } from 'lucide-react';
+import { Search, Filter, Grid, List, Star, BookOpen, Phone, MessageCircle } from 'lucide-react';
 import { Board, BookDTO } from '@/types';
 
 function ShopContent() {
@@ -285,9 +285,19 @@ function ShopContent() {
                     </div>
                   </div>
                   <div className="flex gap-2 pt-2">
-                    <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">
-                      <ShoppingCart className="w-4 h-4 mr-2" />
-                      Add to Cart
+                    <button 
+                      onClick={() => window.open(`tel:+919876543210`, '_self')}
+                      className="flex-1 bg-slate-700 text-white py-2 px-3 rounded-md hover:bg-slate-800 transition-colors flex items-center justify-center text-sm"
+                    >
+                      <Phone className="w-4 h-4 mr-1" />
+                      Call
+                    </button>
+                    <button 
+                      onClick={() => window.open(`https://wa.me/919876543210?text=Hi, I'm interested in "${book.title}" by ${book.author}. Price: ${formatCurrency(book.price)}`, '_blank')}
+                      className="flex-1 bg-emerald-600 text-white py-2 px-3 rounded-md hover:bg-emerald-700 transition-colors flex items-center justify-center text-sm"
+                    >
+                      <MessageCircle className="w-4 h-4 mr-1" />
+                      WhatsApp
                     </button>
                   </div>
                 </div>
@@ -354,13 +364,24 @@ function ShopContent() {
                           {book.quantity > 0 ? `${book.quantity} in stock` : 'Out of stock'}
                         </span>
                       </div>
-                      <button 
-                        className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center"
-                        disabled={book.quantity === 0}
-                      >
-                        <ShoppingCart className="w-4 h-4 mr-2" />
-                        Add to Cart
-                      </button>
+                      <div className="flex gap-2">
+                        <button 
+                          onClick={() => window.open(`tel:+919876543210`, '_self')}
+                          className="bg-slate-700 text-white px-4 py-2 rounded-md hover:bg-slate-800 transition-colors flex items-center"
+                          disabled={book.quantity === 0}
+                        >
+                          <Phone className="w-4 h-4 mr-2" />
+                          Call
+                        </button>
+                        <button 
+                          onClick={() => window.open(`https://wa.me/919876543210?text=Hi, I'm interested in "${book.title}" by ${book.author}. Price: ${formatCurrency(book.price)}`, '_blank')}
+                          className="bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-700 transition-colors flex items-center"
+                          disabled={book.quantity === 0}
+                        >
+                          <MessageCircle className="w-4 h-4 mr-2" />
+                          WhatsApp
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

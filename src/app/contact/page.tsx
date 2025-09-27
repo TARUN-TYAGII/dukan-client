@@ -54,9 +54,11 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                     <p className="text-gray-600">
-                      123 Education Street<br />
-                      Learning City, Delhi 110001<br />
-                      India
+                      Shop no.11,under assandh road flyover,panipat
+Landmark-opposite sardar samose vala
+Panipat 132103
+Haryana, India<br />
+        
                     </p>
                   </div>
                 </div>
@@ -67,8 +69,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
-                    <p className="text-gray-600">+91 98765 43211</p>
+                    <p className="text-gray-600">+91 7015214941</p>
                   </div>
                 </div>
 
@@ -78,8 +79,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@schoolbooks.com</p>
-                    <p className="text-gray-600">support@schoolbooks.com</p>
+                    <p className="text-gray-600">Wisdombookscart@gmail.com</p>
                   </div>
                 </div>
 
@@ -209,7 +209,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
+                  className="w-full bg-gradient-to-r from-slate-800 to-slate-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
